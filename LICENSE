@@ -1,3 +1,22 @@
+PLANET STRUCTURE MODEL
+----------------------
+The planet structure model is from Zeng et al. (2016). The data grid is
+publicly available pn Li Zeng's website:
+	
+	https://www.cfa.harvard.edu/~lzeng/planetmodels.html#mrtables
+	
+	cite as:
+	
+	"Mass-Radius Relation for Rocky Planets based on PREM". Li Zeng,
+	Dimitar D. Sasselov, and Stein B. Jacobsen. ApJ, 819, 127, 2016.
+	http://adsabs.harvard.edu/abs/2016ApJ...819..127Z
+
+
+JULIA FUNCTIONS
+---------------
+The Julia functions were written by Daniel Carrera (dcarrera@gmail.com)
+and are available under the MIT license:
+
 MIT License
 
 Copyright (c) 2018 Daniel Carrera
