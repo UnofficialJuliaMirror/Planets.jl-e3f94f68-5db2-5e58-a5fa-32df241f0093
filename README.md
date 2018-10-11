@@ -1,12 +1,12 @@
 # Planets.jl
 Functions related to planet formation or planet structure models.
 
+## `core_radius`
+
 Right now this package contains only one function, but I intend to add
 more in the future. The function `core_radius` computes the radius of
 a planetary core made of either pure (silicate) rock, a rock-iron mix,
-or a rock-water mix. Cores with all three components are not supported.
-
-The function interpolates across the planet structure grid model of
+or a rock-water mix. Cores with all three components are not supported. The function interpolates across the planet structure grid model of
 Zeng et al. (2016), which is publicly available from [Li Zeng's website](https://www.cfa.harvard.edu/~lzeng/planetmodels.html#mrtables).
 
 Examples:
