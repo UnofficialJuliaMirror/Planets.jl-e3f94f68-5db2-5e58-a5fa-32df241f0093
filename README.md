@@ -5,9 +5,9 @@ Functions related to planet formation or planet structure models.
 
 This package requires Julia v0.7 or later, as well as following packages: 
 
-* `[DataFrames](https://github.com/JuliaData/DataFrames.jl)`
-* `[CSV](https://github.com/JuliaData/CSV.jl)`
-* `[Missings](https://github.com/JuliaData/Missings.jl)`
+* [DataFrames](https://github.com/JuliaData/DataFrames.jl)
+* [CSV](https://github.com/JuliaData/CSV.jl)
+* [Missings](https://github.com/JuliaData/Missings.jl)
 
 To install this package run `] add Planets` on the Julia REPL.
 
