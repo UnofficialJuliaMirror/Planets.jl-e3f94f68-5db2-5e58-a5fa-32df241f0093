@@ -38,7 +38,7 @@ function isochrone(mass)
 		# Linear interpolation in logL, logTe, and logg.
 		#
 		i0 = sum(slice[:Mini] .< mass)
-		i1 = sum(slice[:Mini] .> mass)
+		i1 = i0 + 1
 		
 		m0 = slice[i0,:Mini]
 		m1 = slice[i1,:Mini]
