@@ -1,7 +1,7 @@
 name = "Planets"
 uuid = "7a3fd1c8-cccc-11e8-1991-ff9663c7a777"
 authors = ["Daniel Carrera <dcarrera@gmail.com>"]
-version = "0.2.0"
+version = "0.3.0"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
