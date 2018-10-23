@@ -29,10 +29,10 @@ function isochrone(mass)
 		slice = iso_table[ iso_table[:t] .== t , :]
 		
 		if mass <= minimum(slice[:Mini])
-			@error("$mass Ms <= $(minimum(slice[:Mini])) Ms at t = $t")
+			@error("$mass Ms <= $(minimum(slice[:Mini])) Ms at j = $j, t = $t")
 		end
 		if mass >= maximum(slice[:Mini])
-			@error("$mass Ms >= $(maximum(slice[:Mini])) Ms at t = $t")
+			@error("$mass Ms >= $(maximum(slice[:Mini])) Ms at j = $j, t = $t")
 		end
 		#
 		# Linear interpolation in logL, logTe, and logg.
