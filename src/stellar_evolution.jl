@@ -17,7 +17,7 @@ function stellar_evolution(mass)
 	# The masses are not all the same at each time snapshot.
 	#
 	local df = DataFrame()
-	df[:t] = unique(iso_table[:t])
+	df[:t] = unique(parsec_table[:t])
 	df[:logL] = 0.0
 	df[:Te] = 0.0
 	df[:logg] = 0.0
@@ -26,7 +26,7 @@ function stellar_evolution(mass)
 	
 	for j in 1:N
 		t = df[j,:t]
-		slice = iso_table[ iso_table[:t] .== t , :]
+		slice = parsec_table[ parsec_table[:t] .== t , :]
 		
 		if mass <= minimum(slice[:Mini])
 			@error("$mass Ms <= $(minimum(slice[:Mini])) Ms at j = $j, t = $t")
