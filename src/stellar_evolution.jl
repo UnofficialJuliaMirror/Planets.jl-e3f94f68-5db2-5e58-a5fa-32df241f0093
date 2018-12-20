@@ -1,18 +1,18 @@
 #=
 Author: Daniel Carrera (dcarrera@gmail.com)
 
-Compute stellar isochrones (luminosity, temperature, and logg) for AFGKM
+Compute stellar evolution tracks (luminosity, temperature, and logg) for AFGKM
 stars up to 0.89 Gyr using the stellar models of Marigo et al. (2017).
 =#
 using DataFrames
 using Statistics
 using CSV
 
-iso_names = [:Z, :t, :Mini, :Mass, :logL, :logTe, :logg]
-iso_table = "$(@__DIR__)/../data/PARSEC_Isochrones_Z010.dat"
-iso_table = CSV.read(iso_table, datarow=9, header=iso_names)
+parsec_names = [:Z, :t, :Mini, :Mass, :logL, :logTe, :logg]
+parsec_table = "$(@__DIR__)/../data/PARSEC_Isochrones_Z010.dat"
+parsec_table = CSV.read(parsec_table, datarow=9, header=parsec_names)
 
-function isochrone(mass)
+function stellar_evolution(mass)
 	#
 	# The masses are not all the same at each time snapshot.
 	#

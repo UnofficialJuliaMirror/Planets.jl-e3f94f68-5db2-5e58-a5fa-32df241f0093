@@ -6,7 +6,7 @@ export core_radius
 include("accretion.jl")
 export accretion_rate
 
-include("isochrone.jl")
-export isochrone
+include("stellar_evolution.jl")
+export stellar_evolution
 
 end # module
