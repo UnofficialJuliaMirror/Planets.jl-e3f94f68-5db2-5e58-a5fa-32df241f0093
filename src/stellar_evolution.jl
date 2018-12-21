@@ -35,7 +35,7 @@ Example:
 Citation:
 	
 	Marigo et al. (2017)
-	http://stev.oapd.inaf.it/cm
+	http://stev.oapd.inaf.it/cgi-bin/cmd
 	http://adsabs.harvard.edu/abs/2017ApJ...835...77M
 """
 

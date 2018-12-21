@@ -31,11 +31,7 @@ Examples:
 	#
 	radius = core_radius(3.0, fe=0.1) # In Earth radii.
 
-Citation:
-	
-	Zeng et al (2016)
-	http://adsabs.harvard.edu/abs/2016ApJ...819..127Z
-
+Citation: [Zeng et al (2016)](http://adsabs.harvard.edu/abs/2016ApJ...819..127Z)
 
 ## `accretion_rate`
 
@@ -65,12 +61,10 @@ Example:
 	
 	M_atm_dot = accretion_rate(M_core, M_atm, T_disk) # M_earth / year.
 	
-Citation:
-	
-	Carrera et al. (2018) and Ginzburg et al. (2016)
-	
-	http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1804.05069
-	http://adsabs.harvard.edu/abs/2016ApJ...825...29G
+Citations:
+[Carrera et al. (2018)](http://adsabs.harvard.edu/abs/2018ApJ...866..104C)
+and
+[Ginzburg et al. (2016)](http://adsabs.harvard.edu/abs/2016ApJ...825...29G)
 
 ## `stellar_evolution`
 
@@ -95,8 +89,7 @@ Example:
 	df[1,:logL]
 	df[1,:logg]
 	
-Citation:
+Citation: [Marigo et al. (2017)](http://adsabs.harvard.edu/abs/2017ApJ...835...77M)
+
+See also: [Web interface](http://stev.oapd.inaf.it/cgi-bin/cmd)
 	
-	Marigo et al. (2017)
-	http://stev.oapd.inaf.it/cm
-	http://adsabs.harvard.edu/abs/2017ApJ...835...77M
