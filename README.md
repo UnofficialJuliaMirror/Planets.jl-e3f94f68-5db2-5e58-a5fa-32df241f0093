@@ -72,3 +72,31 @@ Citation:
 	http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1804.05069
 	http://adsabs.harvard.edu/abs/2016ApJ...825...29G
 
+## `stellar_evolution`
+
+Compute the stellar evolution tracks (luminosity, temperature, logg) for
+AFGKM with a metallicity of Z = 1.0%, up to an age of 0.89 Gyr, using the
+stellar models of Marigo et al. (2017). This function returns a dataframe
+with the following columns
+
+	:t		Age of the star (years)
+	:Teff   Star's effective temperature (K)
+	:logL	Log base 10 of the stellar luminosity (L_sun)
+	:logg   Log gravity.
+
+Example:
+
+	M_star = 0.5 # Solar masses.
+	
+	df = stellar_evolution(M_star)
+	
+	df[1,:t]
+	df[1,:Teff]
+	df[1,:logL]
+	df[1,:logg]
+	
+Citation:
+	
+	Marigo et al. (2017)
+	http://stev.oapd.inaf.it/cm
+	http://adsabs.harvard.edu/abs/2017ApJ...835...77M
