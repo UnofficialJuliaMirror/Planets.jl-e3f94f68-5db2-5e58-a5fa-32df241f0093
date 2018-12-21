@@ -79,9 +79,9 @@ AFGKM with a metallicity of Z = 1.0%, up to an age of 0.89 Gyr, using the
 stellar models of Marigo et al. (2017). This function returns a dataframe
 with the following columns
 
-	:t		Age of the star (years)
+	:t      Age of the star (years)
 	:Teff   Star's effective temperature (K)
-	:logL	Log base 10 of the stellar luminosity (L_sun)
+	:logL   Log base 10 of the stellar luminosity (L_sun)
 	:logg   Log gravity.
 
 Example:
