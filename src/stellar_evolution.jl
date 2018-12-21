@@ -1,8 +1,6 @@
 #=
 Author: Daniel Carrera (dcarrera@gmail.com)
 
-Compute stellar evolution tracks (luminosity, temperature, and logg) for AFGKM
-stars up to 0.89 Gyr using the stellar models of Marigo et al. (2017).
 =#
 using DataFrames
 using Statistics
@@ -12,14 +10,43 @@ parsec_names = [:Z, :t, :Mini, :Mass, :logL, :logTe, :logg]
 parsec_table = "$(@__DIR__)/../data/PARSEC_Isochrones_Z010.dat"
 parsec_table = CSV.read(parsec_table, datarow=9, header=parsec_names)
 
+"""
+Compute the stellar evolution tracks (luminosity, temperature, logg) for
+AFGKM with a metallicity of Z = 1.0%, up to an age of 0.89 Gyr, using the
+stellar models of Marigo et al. (2017). This function returns a dataframe
+with the following columns
+
+	:t		Age of the star (years)
+	:Teff   Star's effective temperature (K)
+	:logL	Log base 10 of the stellar luminosity (L_sun)
+	:logg   Log gravity.
+
+Example:
+
+	M_star = 0.5 # Solar masses.
+	
+	df = stellar_evolution(M_star)
+	
+	df[1,:t]
+	df[1,:Teff]
+	df[1,:logL]
+	df[1,:logg]
+	
+Citation:
+	
+	Marigo et al. (2017)
+	http://stev.oapd.inaf.it/cm
+	http://adsabs.harvard.edu/abs/2017ApJ...835...77M
+"""
+
 function stellar_evolution(mass)
 	#
 	# The masses are not all the same at each time snapshot.
 	#
 	local df = DataFrame()
 	df[:t] = unique(parsec_table[:t])
+	df[:Teff] = 0.0
 	df[:logL] = 0.0
-	df[:Te] = 0.0
 	df[:logg] = 0.0
 	
 	local N = size(df,1)
@@ -51,7 +78,7 @@ function stellar_evolution(mass)
 		lT0 = slice[i0,:logTe]
 		lT1 = slice[i1,:logTe]
 		lT = lT0 * (m1 - mass)/(m1 - m0) + lT1 * (m0 - mass)/(m0 - m1)
-		df[j,:Te] = 10^lT
+		df[j,:Teff] = 10^lT
 		
 		lg0 = slice[i0,:logg]
 		lg1 = slice[i1,:logg]
