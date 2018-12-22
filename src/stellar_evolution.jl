@@ -147,11 +147,11 @@ function stellar_evolution(m::Number;t::Number=1e9,Z::Number=0.01)
 	#
 	# Metallicity between Z1 and Z2.
 	#
-	Z1 = floor(Int,Z / 0.005) * 5
-	Z2 = ceil( Int,Z / 0.005) * 5
+	Z1 = floor(Int,Z / 0.005) * 0.005
+	Z2 = ceil( Int,Z / 0.005) * 0.005
 	
-	s1 = @sprintf("Z%02d", Z1)
-	s2 = @sprintf("Z%02d", Z2)
+	s1 = @sprintf("Z%02d", Z1 * 1000)
+	s2 = @sprintf("Z%02d", Z2 * 1000)
 	
 	load_parsec(s1)
 	load_parsec(s2)
