@@ -88,3 +88,31 @@ Citation: [Marigo et al. (2017)](http://adsabs.harvard.edu/abs/2017ApJ...835...7
 
 See also: [Web interface](http://stev.oapd.inaf.it/cgi-bin/cmd)
 	
+
+## `habitable_zone`
+
+Computes all the limits for the habitable zone from Kopparapu et al. (2013).
+This function uses the updated coefficients from the erratum.
+
+Input:
+
+    Teff       Star's effective temperature (K)
+	L_star     Star's luminosity (L_sun)
+
+Example:
+	
+	Teff   = 3700  # Temperature of a 0.5 M_sun star.
+	L_star = 0.04  # Luminosity of a 0.5 M_sun star.
+	
+	limits = habitable_zone(Teff, L_star)
+	
+	@info("Recent Venus       = \$(limits[1]) AU")
+	@info("Runaway Greenhouse = \$(limits[2]) AU")
+	@info("Moist Greenhouse   = \$(limits[3]) AU")
+	@info("Maximum Greenhouse = \$(limits[4]) AU")
+	@info("Early Mars         = \$(limits[5]) AU")
+
+Citation: [Kopparapu et al. (2013)](http://adsabs.harvard.edu/abs/2013ApJ...765..131K)
+
+See also: [Erratum](http://adsabs.harvard.edu/abs/2013ApJ...770...82K)
+
