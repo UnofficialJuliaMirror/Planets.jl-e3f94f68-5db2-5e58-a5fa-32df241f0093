@@ -92,7 +92,7 @@ See also: [Web interface](http://stev.oapd.inaf.it/cgi-bin/cmd)
 ## `habitable_zone`
 
 Computes all the limits for the habitable zone from Kopparapu et al. (2013).
-This function uses the updated coefficients from the erratum.
+This function uses the updated coefficients from their website.
 
 Input:
 
@@ -106,13 +106,14 @@ Example:
 	
 	limits = habitable_zone(Teff, L_star)
 	
-	@info("Recent Venus       = \$(limits[1]) AU")
-	@info("Runaway Greenhouse = \$(limits[2]) AU")
-	@info("Moist Greenhouse   = \$(limits[3]) AU")
-	@info("Maximum Greenhouse = \$(limits[4]) AU")
-	@info("Early Mars         = \$(limits[5]) AU")
+	@info("Recent Venus                  = \$(limits[1]) AU")
+	@info("Runaway Greenhouse            = \$(limits[2]) AU")
+	@info("Maximum Greenhouse            = \$(limits[3]) AU")
+	@info("Early Mars                    = \$(limits[4]) AU")
+	@info("Runaway Greenhouse for 5.0 ME = \$(limits[5]) AU")
+	@info("Runaway Greenhouse for 0.1 ME = \$(limits[6]) AU")
 
 Citation: [Kopparapu et al. (2013)](http://adsabs.harvard.edu/abs/2013ApJ...765..131K)
 
-See also: [Erratum](http://adsabs.harvard.edu/abs/2013ApJ...770...82K)
+See also: [Updated values](https://depts.washington.edu/naivpl/sites/default/files/hz.shtml)
 
