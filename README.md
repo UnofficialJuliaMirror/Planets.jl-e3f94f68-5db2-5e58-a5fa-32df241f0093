@@ -1,8 +1,12 @@
 [![Build Status](https://travis-ci.com/dcarrera/Planets.jl.svg?branch=master)](https://travis-ci.com/dcarrera/Planets.jl)
 
 # Planets.jl
-This package provides functions related to the formation of planetary systems
-and the structure of planets.
+This package provides functions related to the formation and properties of
+planets. There are formulas to compute the gas accretion rate onto a planet,
+the core radius of the planet, and the location of the habitable zone. All the
+formulas are taken from peer reviewed publications in astronomy journals, and
+links to the [Astrophysics Data System (ADS)](http://adsabs.harvard.edu/) are
+included in the documentation.
 
 ## Installation
 
@@ -13,7 +17,7 @@ and the structure of planets.
 This function computes the radius of a planetary core made of either pure
 silicate rock, a rock-iron mix, or a rock-water mix. Cores with all three
 components are not supported. The function interpolates across the planet
-structure grid model of Zeng et al. (2016), which is publicly available from
+structure grid model of [Zeng et al (2016)](http://adsabs.harvard.edu/abs/2016ApJ...819..127Z), which is publicly available from
 [Li Zeng's website](https://www.cfa.harvard.edu/~lzeng/planetmodels.html#mrtables).
 
 Examples:
@@ -34,7 +38,9 @@ Citation: [Zeng et al (2016)](http://adsabs.harvard.edu/abs/2016ApJ...819..127Z)
 
 Compute the gas accretion rate onto a planet, up to Neptune size, embedded
 in a protoplanetary disk. This function implements Equation (B36) derived in
-Carrera et al. (2018) which itself is adapted from Ginzburg et al. (2016).
+[Carrera et al. (2018)](http://adsabs.harvard.edu/abs/2018ApJ...866..104C)
+which itself is adapted from
+[Ginzburg et al. (2016)](http://adsabs.harvard.edu/abs/2016ApJ...825...29G).
 
 **NOTE**: Equation (B36) of Carrera et al. is in units of M_earth/Myr but
 this function returns values in untis of M_earth/year.
@@ -67,7 +73,7 @@ and
 
 Compute the stellar evolution tracks (luminosity, temperature, logg) for
 AFGKM with a metallicity of Z = 1.0%, up to an age of 0.89 Gyr, using the
-stellar models of Marigo et al. (2017). This function the following values:
+stellar models of [Marigo et al. (2017)](http://adsabs.harvard.edu/abs/2017ApJ...835...77M). This function the following values:
 
 	Teff     Star's effective temperature (K)
 	L_star   Log base 10 of the stellar luminosity (L_sun)
@@ -88,8 +94,7 @@ See also: [Web interface](http://stev.oapd.inaf.it/cgi-bin/cmd)
 
 ## `habitable_zone`
 
-Computes all the limits for the habitable zone from Kopparapu et al. (2013).
-This function uses the updated coefficients from their website.
+Computes all the limits for the habitable zone from [Kopparapu et al. (2013)](http://adsabs.harvard.edu/abs/2013ApJ...765..131K). This function uses the updated coefficients from their website.
 
 Input:
 
