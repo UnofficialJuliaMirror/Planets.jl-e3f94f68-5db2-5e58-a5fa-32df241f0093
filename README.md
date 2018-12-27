@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dcarrera/Planets.jl.svg?branch=master)](https://travis-ci.com/dcarrera/Planets.jl)
+
 # Planets.jl
 Functions related to planet formation or planet structure models.
 
