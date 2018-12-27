@@ -10,7 +10,7 @@ included in the documentation.
 
 ## Installation
 
-`Planets.jl` requires Julia v1.0 or later, as well the packages [CSV](https://github.com/JuliaData/CSV.jl), [Missings](https://github.com/JuliaData/Missings.jl), and [DataFrames](https://github.com/JuliaData/DataFrames.jl). To install this package run `] add Planets` on the Julia REPL.
+`Planets.jl` requires Julia v1.0 or later, as well the packages [CSV](https://github.com/JuliaData/CSV.jl) 0.4.2 or later, [Missings](https://github.com/JuliaData/Missings.jl), and [DataFrames](https://github.com/JuliaData/DataFrames.jl). To install this package run `] add Planets` on the Julia REPL.
 
 ## `core_radius`
 
