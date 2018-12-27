@@ -1,17 +1,12 @@
 [![Build Status](https://travis-ci.com/dcarrera/Planets.jl.svg?branch=master)](https://travis-ci.com/dcarrera/Planets.jl)
 
 # Planets.jl
-Functions related to planet formation or planet structure models.
+This package provides functions related to the formation of planetary systems
+and the structure of planets.
 
 ## Installation
 
-This package requires Julia v0.7 or later, as well as following packages: 
-
-* [DataFrames](https://github.com/JuliaData/DataFrames.jl)
-* [CSV](https://github.com/JuliaData/CSV.jl)
-* [Missings](https://github.com/JuliaData/Missings.jl)
-
-To install this package run `] add Planets` on the Julia REPL.
+`Planets.jl` requires Julia v1.0 or later, as well the packages [CSV](https://github.com/JuliaData/CSV.jl), [Missings](https://github.com/JuliaData/Missings.jl), and [DataFrames](https://github.com/JuliaData/DataFrames.jl). To install this package run `] add Planets` on the Julia REPL.
 
 ## `core_radius`
 
